@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <button type="button" id="sidebarCollapse" class="btn btn-light">
+            <img src="https://cdn-icons-png.flaticon.com/128/2926/2926296.png" class="settings-icon ri">
+        </button>
+        <h1 class="mx-auto text-light"> Gautam </h1>
+        <div class="navbar-nav ml-auto ep">
+            <input class="form-control" placeholder="Search Here..">
+            <a class="nav-item nav-link" href="#"><img src="https://cdn-icons-png.flaticon.com/128/875/875623.png"
+                    class="settings-icon"></a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cog"></i><img class="settings-icon"
+                        src="https://cdn-icons-png.flaticon.com/128/8428/8428617.png">
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="settingsDropdown">
+                    <h6 class="dropdown-header">Settings</h6>
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Account</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3 class="text-light">Content</h3>
+        </div>
+        <ul class="list-unstyled components linko">
+            <li>
+                <a href="#" class="option" data-target="all">All</a>
+            </li>
+            <li>
+                <a href="#" class="option" data-target="card">Card</a>
+            </li>
+            <li>
+                <a href="#" class="option" data-target="datatable">Data Table</a>
+            </li>
+            <li>
+                <a href="#" class="option" data-target="todolist">To-Do List</a>
+            </li>
+            <li>
+                <a href="#" class="option" data-target="datatable">Data Table</a>
+            </li>
+            <li>
+                <a href="#" class="option" data-target="todolist">To-Do List</a>
+            </li>
+            
+
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <div class="container-fluid">
+            <h4>Progress</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">First Box</h5>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Secound box</h5>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">THird box</h5>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Table -->
+                <div class="col-md-12 mt-4">
+                    <h4>Data Table</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Ticket ID</th>
+                                <th>Project</th>
+                                <th>First box</th>
+                                <th>Time</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1212</td>
+                                <td>Secound box</td>
+                                <td>Calculation Algorithm</td>
+                                <td>2 Days</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>2355</td>
+                                <td>Third box</td>
+                                <td>5 Days</td>
+                                <td>160</td>
+                            </tr>
+                            <tr>
+                                <td>2345</td>
+                                <td>Web Development</td>
+                                <td>Navbar and Dropdowns</td>
+                                <td>1 Day</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>1445</td>
+                                <td>App Development</td>
+                                <td>Connection Error</td>
+                                <td>5 Days</td>
+                                <td>150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- To-Do List -->
+                <div class="col-md-12 mt-4">
+                    <h4>To-Do List</h4>
+                    <ul class="list-group" id="todoList">
+                        <div class="input-group mt-3 mb-3">
+                            <input type="text" id="newTask" class="form-control" placeholder="Add a new task">
+                            <div class="input-group-append">
+                                <button id="addTaskBtn" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                        <li class="list-group-item">
+                            <label class="form-check-label" for="todo1">Complete the navbar issue in the previous
+                                project.</label>
+                            <button class="btn btn-danger btn-sm float-right">Delete</button>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="form-check-label" for="todo2">Meet the product manager for discussion.</label>
+                            <button class="btn btn-danger btn-sm float-right">Delete</button>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="form-check-label" for="todo3">Prepare a prototype for the latest
+                                project.</label>
+                            <button class="btn btn-danger btn-sm float-right">Delete</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Your custom script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
